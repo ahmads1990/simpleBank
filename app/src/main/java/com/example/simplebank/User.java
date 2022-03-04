@@ -4,17 +4,19 @@ public class User {
     private int id;
 
 
-
     private String username;
     private String email;
     private float currentBalance;
 
-    public User(){}
+    public User() {
+    }
+
     public User(String username, String email, float currentBalance) {
         this.username = username;
         this.email = email;
         this.currentBalance = currentBalance;
     }
+
     public int getId() {
         return id;
     }
@@ -22,6 +24,7 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
+
     public String getUsername() {
         return username;
     }

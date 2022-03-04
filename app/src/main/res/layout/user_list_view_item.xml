@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/user_list_item_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:stretchColumns="*">
 
-    <TableRow
-        android:gravity="left"
-        >
+    <TableRow android:gravity="left">
+
         <TextView
             android:id="@+id/user_list_item_name"
             android:layout_width="wrap_content"

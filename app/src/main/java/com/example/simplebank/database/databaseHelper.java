@@ -165,7 +165,7 @@ public class databaseHelper extends SQLiteOpenHelper {
     }
 
     //add new transfer
-    public void addNewTransfer(int senderId, int receiverId, float amount){
+    public void addNewTransfer(int senderId, int receiverId, float amount) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         Date date = new Date();

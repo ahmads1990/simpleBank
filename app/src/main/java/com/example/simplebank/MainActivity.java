@@ -1,14 +1,15 @@
 package com.example.simplebank;
 
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.util.Log;
+import com.example.simplebank.mainpage.recyclerListAdapter;
 
 import java.util.ArrayList;
-import com.example.simplebank.mainpage.recyclerListAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList<User> userArrayList = new ArrayList<>();
-        userArrayList.add(new User("ahmad","$",123457.5f));
-        userArrayList.add(new User("ahmad","$",123457.5f));
-        userArrayList.add(new User("ahmad","$",123457.5f));
-        userArrayList.add(new User("ahmad","$",123457.5f));
-        userArrayList.add(new User("ahmad","$",123457.5f));
-        userArrayList.add(new User("ahmad","$",123457.5f));
+        userArrayList.add(new User("ahmad", "$", 123457.5f));
+        userArrayList.add(new User("ahmad", "$", 123457.5f));
+        userArrayList.add(new User("ahmad", "$", 123457.5f));
+        userArrayList.add(new User("ahmad", "$", 123457.5f));
+        userArrayList.add(new User("ahmad", "$", 123457.5f));
+        userArrayList.add(new User("ahmad", "$", 123457.5f));
 
-        Log.d("mytag","us " + userArrayList.get(0).getUsername());
+        Log.d("mytag", "us " + userArrayList.get(0).getUsername());
         RecyclerView recyclerView = findViewById(R.id.main_user_list_recycler);
         recyclerListAdapter adapter = new recyclerListAdapter(this, userArrayList);
 
