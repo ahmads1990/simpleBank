@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -67,7 +68,7 @@ public class recyclerListAdapter extends  RecyclerView.Adapter<recyclerListAdapt
         TextView email;
         TextView balance;
 
-        ConstraintLayout parentLayout;
+        TableLayout parentLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -76,7 +77,7 @@ public class recyclerListAdapter extends  RecyclerView.Adapter<recyclerListAdapt
             email = (TextView) itemView.findViewById(R.id.user_list_item_email);
             balance = (TextView) itemView.findViewById(R.id.user_list_item_balance);
 
-            parentLayout = (ConstraintLayout) itemView.findViewById(R.id.user_list_item_layout);
+            parentLayout = (TableLayout) itemView.findViewById(R.id.user_list_item_layout);
         }
 
     }

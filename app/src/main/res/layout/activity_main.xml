@@ -6,41 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/main_user_list_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Name"
-        app:layout_constraintEnd_toStartOf="@+id/main_user_list_email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_user_list_recyler"
+        android:id="@+id/main_user_list_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_user_list_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
-    <TextView
-        android:id="@+id/main_user_list_email"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
-        app:layout_constraintEnd_toStartOf="@+id/main_user_list_balance"
-        app:layout_constraintStart_toEndOf="@+id/main_user_list_name"
-        app:layout_constraintTop_toTopOf="@+id/main_user_list_name" />
-
-    <TextView
-        android:id="@+id/main_user_list_balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Current balance"
+        android:background="@color/design_default_color_secondary_variant"
+        android:stretchColumns="*"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/main_user_list_email"
-        app:layout_constraintTop_toTopOf="@+id/main_user_list_email" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/main_user_list_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/main_user_list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/main_user_list_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Current balance" />
+        </TableRow>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

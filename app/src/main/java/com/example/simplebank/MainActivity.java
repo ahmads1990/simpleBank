@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         userArrayList.add(new User("ahmad","$",123457.5f));
 
         Log.d("mytag","us " + userArrayList.get(0).getUsername());
-        RecyclerView recyclerView = findViewById(R.id.main_user_list_recyler);
+        RecyclerView recyclerView = findViewById(R.id.main_user_list_recycler);
         recyclerListAdapter adapter = new recyclerListAdapter(this, userArrayList);
 
         recyclerView.setAdapter(adapter);
